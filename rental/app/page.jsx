@@ -1,8 +1,12 @@
+import Heros from "../components/Heros";
+import InfoBoxes from "../components/InfoBoxes";
+
 const HomePage = () => {
   return (
     <html lang="en">
       <body>
-        <div>HomePage</div>
+        <Heros />
+        <InfoBoxes />
       </body>
     </html>
   );
