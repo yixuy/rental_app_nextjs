@@ -1,4 +1,4 @@
-// must use client 
+// must use client
 "use client";
 import ClipLoader from "react-spinners/ClipLoader";
 
