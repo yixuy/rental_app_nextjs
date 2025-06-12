@@ -1,1 +1,14 @@
 @import 'tailwindcss';
+
+/* 2. Font import */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
+
+/* 3. Override global styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  grid-template-columns: 70% 30%;
+  background-color: #f9fafb; /* example light background */
+  color: #111827; /* example text color */
+  margin: 0;
+  padding: 0;
+}
