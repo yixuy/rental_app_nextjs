@@ -7,6 +7,7 @@ import Link from "next/link";
 import PropertyDetails from "../../../components/PropertyDetails";
 import { FaArrowLeft } from "react-icons/fa";
 import Spinner from "../../../components/Spinner";
+import PropertyImage from "../../../components/PropertyImage";
 
 const PropertyPage = () => {
   const { id } = useParams();
@@ -33,7 +34,7 @@ const PropertyPage = () => {
 
   if (!property && !loading) {
     return (
-      <h1 classNameName="text-center text-2xl font-bold mt-10">
+      <h1 className="text-center text-2xl font-bold mt-10">
         Property Not Found
       </h1>
     );
@@ -73,15 +74,15 @@ const PropertyPage = () => {
                       Contact Property Manager
                     </h3>
                     <form>
-                      <div classNameName="mb-4">
+                      <div className="mb-4">
                         <label
-                          classNameName="block text-gray-700 text-sm font-bold mb-2"
+                          className="block text-gray-700 text-sm font-bold mb-2"
                           htmlFor="name"
                         >
                           Name:
                         </label>
                         <input
-                          classNameName="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                           id="name"
                           type="text"
                           placeholder="Enter your name"
@@ -103,15 +104,15 @@ const PropertyPage = () => {
                           required
                         />
                       </div>
-                      <div classNameName="mb-4">
+                      <div className="mb-4">
                         <label
-                          classNameName="block text-gray-700 text-sm font-bold mb-2"
+                          className="block text-gray-700 text-sm font-bold mb-2"
                           htmlFor="phone"
                         >
                           Phone:
                         </label>
                         <input
-                          classNameName="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                           id="phone"
                           type="text"
                           placeholder="Enter your phone number"
@@ -145,6 +146,7 @@ const PropertyPage = () => {
               </div>
             </div>
           </section>
+          <PropertyImage images={property.images} />
         </>
       )}
     </div>
