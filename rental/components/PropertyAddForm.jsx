@@ -88,7 +88,6 @@ const PropertyAddForm = () => {
     }
 
     // update state with array of images
-    // console.log(files);
     setFields((prevFields) => ({
       ...prevFields,
       images: updateImages,
@@ -97,7 +96,11 @@ const PropertyAddForm = () => {
   return (
     mounted && (
       <div>
-        <form>
+        <form
+          action="/api/properties"
+          method="POST"
+          encType="multipart/form-data"
+        >
           <h2 className="text-3xl text-center font-semibold mb-6">
             Add Property
           </h2>
