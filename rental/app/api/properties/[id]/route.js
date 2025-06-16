@@ -4,12 +4,12 @@ import { getSessionUser } from "../../../../utils/getSessionUser";
 import { verify } from "crypto";
 
 // GET /api/properties/:id`
-export const GET = async (request, { params }) => {
+export const GET = async (request, context) => {
   try {
     await connectDB();
+    const paramsObj = await context.params;
+    const properties = await Property.findById(paramsObj.id);
 
-    const properties = await Property.findById(params.id);
-    // const property = await Property.findById(params.id);
     if (!properties) {
       return new Response("Property Not Found", { status: 404 });
     }
