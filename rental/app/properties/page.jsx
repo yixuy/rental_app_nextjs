@@ -1,5 +1,7 @@
 import Properties from "@/components/Properties";
 import { fetchProperties } from "@/utils/requests";
+export const dynamic = "force-dynamic";
+
 
 const PropertiesPage = async () => {
   const data = await fetchProperties();

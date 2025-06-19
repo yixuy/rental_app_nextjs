@@ -24,7 +24,9 @@ const ProfilePage = () => {
       }
 
       try {
-        const res = await fetch(`/api/properties/user/${userId}`);
+        const res = await fetch(`/api/properties/user/${userId}`, {
+          next: { revalidate: 60 },
+        });
 
         if (res.status === 200) {
           const data = await res.json();

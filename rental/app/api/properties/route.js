@@ -2,10 +2,10 @@ import connectDB from "../../../config/database";
 import Property from "../../../models/Property";
 import { getSessionUser } from "@/utils/getSessionUser";
 import cloudinary from "../../../config/cloudinary";
-import Properties from "../../../components/Properties";
+
 
 // GET /api/properties
-
+export const dynamic = 'force-dynamic';
 export const GET = async (request) => {
   try {
     await connectDB();
