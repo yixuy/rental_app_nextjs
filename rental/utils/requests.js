@@ -1,25 +1,5 @@
 const apiDomain = process.env.NEXT_PUBLIC_API_DOMAIN || null;
 
-async function fetchUserProperties(userId) {
-  try {
-    // console.log(`${process.env.NEXT_PUBLIC_API_DOMAIN}/properties`);
-    if (!apiDomain) {
-      return [];
-    }
-
-    const res = await fetch(`${apiDomain}/properties/user/${userId}`, {
-      cache: "no-store",
-    });
-
-    if (!res.ok) {
-      throw new Error("Failed to fetch data");
-    }
-    return res.json();
-  } catch (error) {
-    console.log(error);
-  }
-}
-
 // Fetch all properties
 async function fetchProperties({ showFeatured = false } = {}) {
   try {
@@ -43,6 +23,7 @@ async function fetchProperties({ showFeatured = false } = {}) {
     return [];
   }
 }
+
 // Fetch single property
 async function fetchProperty(id) {
   try {
