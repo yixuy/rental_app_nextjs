@@ -13,14 +13,16 @@
 
 ## 🛠 Tech Stack
 - Framework: Next.js
-- Authentication: OAuth (Google API)
+- Authentication: OAuth using Google API()
 - Database: MongoDB via Mongoose
 - Image Uploads: Cloudinary
 - Maps & Geolocation: Mapbox
 
-## Before running run
+## Before running run NextAuth
 - set up mongoDB 
-- ``` cd rental ``` 
+- ``` cd rental ```
 
 ## How to run 
+```cd rental```
+```npm install```
 ``` npm run dev ```
