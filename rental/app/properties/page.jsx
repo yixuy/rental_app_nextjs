@@ -1,25 +1,17 @@
 import Properties from "@/components/Properties";
-import { fetchProperties } from "@/utils/requests";
+import PropertySearchForm from "@/components/PropertySearchForm";
 export const dynamic = "force-dynamic";
 
 const PropertiesPage = async () => {
-  let properties = [];
-
-  try {
-    const data = await fetchProperties();
-
-    if (data && Array.isArray(data.properties)) {
-      properties = data.properties.sort(
-        (a, b) => new Date(b.createdAt) - new Date(a.createdAt)
-      );
-    } else {
-      console.error("data.properties is not an array:", data?.properties);
-    }
-  } catch (err) {
-    console.error("Error fetching properties:", err);
-  }
-
-  return <Properties />;
+  return (
+    <>
+      <section className="bg-blue-700 py-4">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col items-start sm:px-6 lg:px-8">
+          <PropertySearchForm />
+        </div>
+      </section>
+      <Properties />
+    </>
+  );
 };
-
 export default PropertiesPage;
