@@ -10,6 +10,8 @@ export const metadata = {
   description: "Find your dream rental property",
   keywords: "rental, find rentals, find properties",
 };
+import 'photoswipe/dist/photoswipe.css';
+
 
 const MainLayout = ({ children }) => {
   return (

@@ -2,7 +2,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { toast } from "react-toastify";
-import { fetchData } from "next-auth/client/_utils";
 import { fetchProperty } from "../utils/requests";
 
 const PropertyEditForm = () => {
